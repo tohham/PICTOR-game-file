@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://crhd3ot02vova"]
+
+[ext_resource type="Script" uid="uid://bn22xlbugwew7" path="res://prologue.gd" id="1_lxnjk"]
+
+[node name="Control" type="Control" unique_id=1917557367]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_lxnjk")
+story_position_ratio = Vector2(0.225, 0.35)
+text_font_size = 42
+text_hold_seconds = 0.8
+fade_seconds = 0.8

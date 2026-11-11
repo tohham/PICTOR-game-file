@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://byekw6vvut7q"]
+
+[ext_resource type="Script" uid="uid://drpl7dj2cg8f1" path="res://Bird.gd" id="1_3udoi"]
+[ext_resource type="Texture2D" uid="uid://ci11taidf7usw" path="res://bird/create_a_animation_frame_1.png" id="12_5ish2"]
+[ext_resource type="Texture2D" uid="uid://c4hv3om0ob3gp" path="res://bird/create_a_animation_frame_2.png" id="13_oqqjl"]
+[ext_resource type="Texture2D" uid="uid://dtrrqwao7vfbw" path="res://bird/create_a_animation_frame_3.png" id="14_kkbyp"]
+[ext_resource type="Texture2D" uid="uid://b6y4t78evj6xa" path="res://bird/create_a_animation_frame_4.png" id="15_xd2e4"]
+[ext_resource type="Texture2D" uid="uid://dnegg1bulxsyg" path="res://bird/create_a_animation_frame_5.png" id="16_uobtb"]
+[ext_resource type="Texture2D" uid="uid://d07gj6troopga" path="res://bird/create_a_animation_frame_6.png" id="17_7nlhs"]
+[ext_resource type="Texture2D" uid="uid://3x2q24tfw2ka" path="res://bird/create_a_animation_frame_7.png" id="18_ihd1c"]
+[ext_resource type="Texture2D" uid="uid://durqddmrcb15f" path="res://bird/create_a_animation_frame_8.png" id="19_wuo3j"]
+[ext_resource type="Texture2D" uid="uid://dn5fgyxev00sw" path="res://bird/create_a_animation_frame_9.png" id="20_ygg6t"]
+[ext_resource type="Texture2D" uid="uid://dh5jbk64hreft" path="res://bird/create_a_animation_frame_10.png" id="21_68e0o"]
+[ext_resource type="Texture2D" uid="uid://craxrkckuv0jd" path="res://bird/create_a_animation_frame_11.png" id="22_8gi5i"]
+[ext_resource type="Texture2D" uid="uid://b5113kiafoo8s" path="res://bird/create_a_animation_frame_12.png" id="23_oscy5"]
+[ext_resource type="Texture2D" uid="uid://dc80q8u8lpydm" path="res://bird/create_a_animation_frame_13.png" id="24_55wg7"]
+[ext_resource type="Texture2D" uid="uid://d4hebtko8ycir" path="res://bird/create_a_animation_frame_14.png" id="25_c6p13"]
+[ext_resource type="Texture2D" uid="uid://cah6fw244nr" path="res://bird/create_a_animation_frame_15.png" id="26_u1t0n"]
+[ext_resource type="Texture2D" uid="uid://bhn64vfaa3d3c" path="res://bird/create_a_animation_frame_16.png" id="27_l8djh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3ktn"]
+animations = [{
+"frames": [{
+"duration": 0.9,
+"texture": ExtResource("18_ihd1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wuo3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ygg6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_68e0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8gi5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_55wg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_oscy5")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_5ish2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_oqqjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kkbyp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_xd2e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_uobtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_7nlhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ihd1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_wuo3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ygg6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_68e0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8gi5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_oscy5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_55wg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_c6p13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_u1t0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_l8djh")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p3ktn"]
+radius = 17.117243
+
+[node name="SpiritBird" type="Area2D" unique_id=1309971964]
+script = ExtResource("1_3udoi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=866849013]
+position = Vector2(-8.666667, -8)
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_p3ktn")
+animation = &"attack"
+frame_progress = 0.1577297
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=377139012]
+position = Vector2(-9, -4)
+shape = SubResource("CircleShape2D_p3ktn")

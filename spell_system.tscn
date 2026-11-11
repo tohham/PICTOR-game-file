@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cssbj82gx71ig"]
+
+[ext_resource type="Script" uid="uid://cqdrw7uvocl7c" path="res://spell_system.gd" id="1_f1gh6"]
+
+[node name="SpellSystem" type="Node2D" unique_id=858365464]
+script = ExtResource("1_f1gh6")

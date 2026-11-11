@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bplcjhqdde2vp"]
+
+[ext_resource type="Script" uid="uid://7i02p3af20ct" path="res://HealthHUD.gd" id="1_v2lfg"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=766918442]
+script = ExtResource("1_v2lfg")

@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://kyx0bo071si3"]
+
+[ext_resource type="Script" uid="uid://bdau476tfox06" path="res://Elephant.gd" id="1_taay4"]
+[ext_resource type="Texture2D" uid="uid://wiqx61ssowaj" path="res://Elephant/the_same_animation_frame_1 (1).png" id="2_i1y4i"]
+[ext_resource type="Texture2D" uid="uid://cyabdiaep1irt" path="res://Elephant/the_same_animation_frame_2 (1).png" id="3_vx8yu"]
+[ext_resource type="Texture2D" uid="uid://k5qeoa7wdhbn" path="res://Elephant/the_same_animation_frame_3 (1).png" id="4_8hmaq"]
+[ext_resource type="Texture2D" uid="uid://cv6ppaov3hqux" path="res://Elephant/the_same_animation_frame_14 (1).png" id="5_nmrb3"]
+[ext_resource type="Texture2D" uid="uid://bm6qoi3bl0odc" path="res://Elephant/the_same_animation_frame_15 (1).png" id="6_x8wxl"]
+[ext_resource type="Texture2D" uid="uid://ds4gxxf316ndj" path="res://Elephant/the_same_animation_frame_13 (1).png" id="7_do0s2"]
+[ext_resource type="Texture2D" uid="uid://bx6imy1ciph4d" path="res://Elephant/the_same_animation_frame_10 (1).png" id="8_8ogtg"]
+[ext_resource type="Texture2D" uid="uid://dvc2ml67j0thw" path="res://Elephant/the_same_animation_frame_9 (1).png" id="9_2yatk"]
+[ext_resource type="Texture2D" uid="uid://dsmefy6seatwl" path="res://Elephant/the_same_animation_frame_8 (1).png" id="10_kne3e"]
+[ext_resource type="Texture2D" uid="uid://debdw25gbe1y8" path="res://Elephant/the_same_animation_frame_7 (1).png" id="11_riq0b"]
+[ext_resource type="Texture2D" uid="uid://daqydvff1108j" path="res://Elephant/the_same_animation_frame_6 (1).png" id="12_fqyiv"]
+[ext_resource type="Texture2D" uid="uid://b5tf7f0263dfy" path="res://Elephant/the_same_animation_frame_5 (1).png" id="13_irr1n"]
+[ext_resource type="Texture2D" uid="uid://c88ui4lulc62c" path="res://Elephant/the_same_animation_frame_4 (1).png" id="14_yye4d"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3ktn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_i1y4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vx8yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8hmaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_nmrb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_x8wxl")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_nmrb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_do0s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8ogtg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2yatk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kne3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_riq0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fqyiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_irr1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vx8yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yye4d")
+}],
+"loop": 0,
+"name": &"反擊",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3ktn"]
+size = Vector2(116, 101)
+
+[node name="Elephant" type="StaticBody2D" unique_id=1014242209]
+z_index = 1
+scale = Vector2(0.85, 0.85)
+script = ExtResource("1_taay4")
+collision_height_ratio = 0.8
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1415088226]
+sprite_frames = SubResource("SpriteFrames_p3ktn")
+animation = &"反擊"
+frame = 9
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121575113]
+position = Vector2(5, 9)
+shape = SubResource("RectangleShape2D_p3ktn")
